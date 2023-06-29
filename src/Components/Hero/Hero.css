@@ -1,0 +1,157 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-left {
+    flex: 3;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-right {
+    flex: 1;
+}
+
+@keyframes best-ad-animation {
+    from {
+        left: 8px;
+    }
+    to {
+        left: 238px;
+    }
+}
+
+/* the best ad css begins  */
+.the-best-ad {
+    background-color: #363d42;
+    color: white;
+    width: fit-content;
+    padding: 20px 13px;
+    margin-top: 4rem;
+    border-radius: 4rem;
+    text-transform: uppercase;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.the-best-ad>div {
+    height: 80%;
+    width: 5.4rem;
+
+    position: absolute;
+    background-color: var(--orange);
+    z-index: 1;
+    border-radius: 3rem;
+    left: 8px;
+
+    animation-name: best-ad-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.the-best-ad>span {
+    position: relative;
+    z-index: 2;
+}
+
+/* the best ad css ends here */
+
+/* the hero text css starts here */
+.hero-text {
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-overflow: inherit;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-text>:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+}
+
+.figures {
+    display: flex;
+    gap: 2rem;
+}
+
+.figures>div {
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+
+.figures>div>:nth-of-type(1) {
+    color: white;
+    font-size: 2rem;
+}
+
+.figures>div>:nth-of-type(2) {
+    color: grey;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-btn{
+    opacity: 0.75;
+    transition: transform 0.5s;
+}
+
+.hero-btn:hover{
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+.hero-buttons>:nth-child(1) {
+    background-color: var(--orange);
+    color: white;
+    width: 8rem;
+}
+
+.hero-buttons>:nth-child(2) {
+    background-color: transparent;
+    color: white;
+    width: 8rem;
+    border: 2px solid var(--orange);
+}
+
+.hero-right {
+    position: relative;
+}
+
+.hero-right>.btn {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    border: 2px solid orange;
+    border-radius: 8px;
+}
+
+.background-video{
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 106%;
+}

@@ -1,0 +1,72 @@
+.join-container {
+    display: flex;
+    gap: 10rem;
+    padding: 0 2rem;
+}
+
+.left-join {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: flex-start;
+}
+
+.left-join>hr {
+    width: 35rem;
+    background-color: var(--orange);
+    height: 0.2rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+.left-join>:nth-child(2),
+.left-join>:nth-child(3) {
+    display: flex;
+    gap: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    color: white;
+}
+
+.right-join {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-join>form {
+    display: flex;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    background-color: gray;
+    width: 90%;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--orange);
+    padding: 0.5rem;
+    font-weight: bold;
+    border: 4px solid transparent;
+    text-transform: capitalize;
+
+    transition: 300ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+::placeholder{
+    color: var(--orange);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
