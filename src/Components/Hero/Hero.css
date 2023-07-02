@@ -1,10 +1,11 @@
 .hero {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .hero-left {
-    flex: 3;
+    flex: 3 1;
     padding: 2rem;
     padding-top: 1.5rem;
     display: flex;
@@ -13,13 +14,14 @@
 }
 
 .hero-right {
-    flex: 1;
+    flex: 1 1;
 }
 
 @keyframes best-ad-animation {
     from {
         left: 8px;
     }
+
     to {
         left: 238px;
     }
@@ -110,12 +112,12 @@
     gap: 1rem;
 }
 
-.hero-btn{
+.hero-btn {
     opacity: 0.75;
     transition: transform 0.5s;
 }
 
-.hero-btn:hover{
+.hero-btn:hover {
     opacity: 1;
     transform: scale(1.06);
 }
@@ -148,10 +150,69 @@
     border-radius: 8px;
 }
 
-.background-video{
+.background-video {
     object-fit: cover;
     position: absolute;
     z-index: -1;
     width: 100vw;
-    height: 106%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* adding responsiveness */
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left>:last-child {
+        visibility: visible;
+    }
+
+    .hero-right>button {
+        display: none;
+    }
+
+    .the-best-ad {
+        margin-top: 0;
+        font-size: small;
+        align-self: center;
+        /* transform: scale(0.8); */
+    }
+
+    .hero-text {
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+    }
+
+    .hero-text>div:nth-of-type(3) {
+        font-weight: 200;
+        font-size: small;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .figures>div>span> :nth-of-type(1) {
+        font-size: large;
+    }
+
+    .figures>div>span> :nth-of-type(2) {
+        font-size: small;
+    }
+
+    @keyframes best-ad-animation {
+        from {
+            left: 8px;
+        }
+
+        to {
+            left: 180px;
+        }
+    }
 }
