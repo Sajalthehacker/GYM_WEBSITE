@@ -38,7 +38,7 @@
     justify-content: space-between;
 }
 
-.card>:nth-child(1){
+.card>:nth-child(1) {
     width: 2rem;
     height: 2rem;
     fill: white;
@@ -76,4 +76,34 @@
 
 .card:hover {
     background-color: var(--orange);
+}
+
+
+/* adding responsiveness  */
+
+@media screen and (max-width: 842px) {
+    .programs-heading {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .programs-heading {
+        flex-direction: column;
+        gap: 1rem;
+        font-size: x-large;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .program-cards {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .programs-heading {
+        font-size: medium;
+    }
 }

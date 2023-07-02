@@ -5,11 +5,12 @@ import whiteTick from '../../assets/whiteTick.png'
 
 const Plans = () => {
     return (
-        <div className="plans-container">
+        <div className="plans-container" id="plans_id">
             <div className="plans-heading">
                 <span className='stroke-text'>ready to</span>
                 <span>start</span>
-                <span className='stroke-text'>your journey with us</span>
+                <span className='stroke-text'>your journey</span>
+                <span> with us</span>
             </div>
 
             <div className="plans-category">

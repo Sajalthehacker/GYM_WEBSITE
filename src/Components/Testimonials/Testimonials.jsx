@@ -9,8 +9,9 @@ const Testimonials = () => {
     const sizeTest = testimonialsData.length
     const [current, setCurrent] = useState(0)
 
-    const leftHandler = () => {
+    const leftHandler = (e) => {
         current === 0 ? setCurrent(sizeTest - 1) : setCurrent((prev) => prev - 1)
+        console.log(e.target);
     }
 
     const rightHandler = () => {
@@ -18,25 +19,27 @@ const Testimonials = () => {
     }
 
     return (
-        <div className="testimonial-container">
+        <div className="testimonial-container" id="testimonials_id">
             <div className="testimonial-left">
-                <span>Testimonials</span>
-                <span className='stroke-text'>What they</span>
-                <span>say about us</span>
+                <span data-aos="fade-right">Testimonials</span>
+                <span className='stroke-text' data-aos="fade-right">What they</span>
+                <span data-aos="fade-right">say about us</span>
 
-                <span>{testimonialsData[current].review}</span>
+                <span data-aos="fade-right">{testimonialsData[current].review}</span>
 
-                <div>
+                <div data-aos="fade-right">
                     <span>{testimonialsData[current].name}</span>
                     <span> - {testimonialsData[current].status}</span>
                 </div>
 
             </div>
             <div className="testimonial-right">
-                <div></div>
-                <div></div>
+                <div className='testimonial-images'>
+                    <div data-aos="fade-right"></div>
+                    <div data-aos="fade-left"></div>
 
-                <img src={testimonialsData[current].image} alt="user pi" />
+                    <img src={testimonialsData[current].image} alt="user pi" data-aos="zoom-out" key={current} />
+                </div>
 
                 <div>
                     <img src={leftArrow} alt="" onClick={leftHandler} />

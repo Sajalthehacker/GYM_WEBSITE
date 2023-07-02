@@ -9,6 +9,7 @@ import Testimonials from './Components/Testimonials/Testimonials';
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Motivation from './Components/Motivation/Motivation';
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,8 @@ function App() {
 
       <Programs />
 
+      <Motivation />
+      
       <Reasons />
 
       <Plans />
@@ -32,7 +35,6 @@ function App() {
 
       <Join />
 
-      <div style={{height:"15rem"}}>a</div>
     </div>
   );
 }
